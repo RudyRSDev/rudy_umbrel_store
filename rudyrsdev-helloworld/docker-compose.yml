@@ -1,0 +1,8 @@
+services:
+    helloworld:
+        ports:
+            - 8080:8080
+            - 8081:8081
+        environment:
+            - DELAY_START_MSEC=2000
+        image: testcontainers/helloworld
