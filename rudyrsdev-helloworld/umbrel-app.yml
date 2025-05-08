@@ -1,24 +1,27 @@
-manifestVersion: 1 # Umbrel OS Version
-id: rudyrsdev-teamspeak
-name: Teamspeak Test
-tagline: YOUR TEAM. YOUR RULES.
-icon: https://www.gravatar.com/avatar/bd94723cfe55ec07a5657229447286d2?s=120&r=g&d=404
-category: Social
-version: "3.13.7" # App Version
-port: 9987
+manifestVersion: 1
+id: rudyrsdev-helloworld
+name: Hello World
+tagline: Replace this tagline with your app's tagline
+icon: https://svgur.com/i/mvA.svg
+category: Development
+version: "1.0.0"
+port: 4000
 description: >-
-  Use crystal clear sound to communicate with your team mates cross-platform with military-grade security, lag-free performance & unparalleled reliability and uptime.
+  Add your app's description here.
 
-developer: TeamSpeak Systems, Inc.
-website: https://teamspeak.com/
-submitter: RudyRSDev
+
+  You can also add newlines!
+
+developer: Umbrel
+website: https://umbrel.com
+submitter: Umbrel
 submission: https://github.com/getumbrel/umbrel-hello-world-app
 repo: https://github.com/getumbrel/umbrel-hello-world-app
-support: https://teamspeak.com/en/support/get-started/
+support: https://github.com/getumbrel/umbrel-hello-world-app/issues
 gallery:
-  - https://teamspeak.com/user/themes/teamspeak/images/Banner_Wide_TS5.jpg
-  - https://teamspeak.com/user/themes/teamspeak/images/Banner_Wide_TS5.jpg
-  - https://teamspeak.com/user/themes/teamspeak/images/Banner_Wide_TS5.jpg
+  - https://i.imgur.com/yyVG0Jb.jpeg
+  - https://i.imgur.com/yyVG0Jb.jpeg
+  - https://i.imgur.com/yyVG0Jb.jpeg
 releaseNotes: >-
   Add what's new in the latest version of your app here.
 dependencies: []
