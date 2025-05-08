@@ -4,7 +4,7 @@ name: Teamspeak
 tagline: YOUR TEAM. YOUR RULES.
 icon: https://static-00.iconduck.com/assets.00/teamspeak-icon-2048x2048-tom1vc9z.png
 category: Social
-version: "3.13.7"
+version: "1.4.1"
 port: 9987
 description: >-
   Use crystal clear sound to communicate with your team mates cross-platform with military-grade security, lag-free performance & unparalleled reliability and uptime.
