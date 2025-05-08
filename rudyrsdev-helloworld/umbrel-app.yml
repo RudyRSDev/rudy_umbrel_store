@@ -1,4 +1,4 @@
-manifestVersion: 1.4.1 # Umbrel OS Version
+manifestVersion: 1 # Umbrel OS Version
 id: rudyrsdev-teamspeak
 name: Teamspeak Test
 tagline: YOUR TEAM. YOUR RULES.
