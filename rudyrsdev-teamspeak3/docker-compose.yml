@@ -1,32 +1,40 @@
 services:
-    teamspeak:
-        restart: always
-        container_name: teamspeak
-        environment:
-            - PUID=503
-            - PGID=503
-            - TS3SERVER_GDPR_SAVE=false
-            - TS3SERVER_LICENSE=accept
-        ports:
-            - 9987:9987/udp
-            - 30033:30033
-            - 10011:10011
-            - 41144:41144
-        volumes:
-            - /data/teamspeak:/data
-        image: mbentley/teamspeak
-    
-    db:
-        image: mariadb
-        restart: always
-        environment:
-            MYSQL_ROOT_PASSWORD: EDFGD654hgrggh45ERG
-            MYSQL_DATABASE: teamspeak
+  teamspeak:
+    restart: always
+    container_name: teamspeak
+    environment:
+      - PUID=503
+      - PGID=503
+      - TS3SERVER_GDPR_SAVE=false
+      - TS3SERVER_LICENSE=accept
+      - TS3SERVER_DB_PLUGIN=ts3db_mariadb
+      - TS3SERVER_DB_SQLCREATEPATH=create_mariadb
+      - TS3SERVER_DB_HOST=db
+      - TS3SERVER_DB_USER=root
+      - TS3SERVER_DB_PASSWORD=EDFGD654hgrggh45ERG
+      - TS3SERVER_DB_NAME=teamspeak
+      - TS3SERVER_DB_WAITUNTILREADY=30
+      - TS3SERVER_LICENSE=accept
+    ports:
+      - 9987:9987/udp
+      - 30033:30033
+      - 10011:10011
+      - 41144:41144
+    volumes:
+      - /data/teamspeak:/data
+    image: mbentley/teamspeak
 
-    ts3-manger:
-        image: "joni1802/ts3-manager"
-        ports:
-            - 4990:8080
-        environment:
-            - WHITELIST=
-            - JWT_SECRET=###
+  db:
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: EDFGD654hgrggh45ERG
+      MYSQL_DATABASE: teamspeak
+
+  ts3-manger:
+    image: "joni1802/ts3-manager"
+    ports:
+      - 4990:8080
+    environment:
+      - WHITELIST=
+      - JWT_SECRET=###
