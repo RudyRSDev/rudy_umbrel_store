@@ -2,9 +2,9 @@ manifestVersion: 1
 id: rudyrsdev-qbitvpn
 name: Qbittorrent VPN
 tagline: Free and reliable P2P Bittorrent client with VPN
-icon: https://i.imgur.com/n4pqJP9.png
+icon: https://i.imgur.com/4HYQM7U.png
 category: Development
-version: "1.0.0"
+version: "1.0.1"
 port: 8095
 description: >-
   qBittorrent is an open-source software alternative to µTorrent. It's designed to meet the needs of most users while using as little CPU and memory as possible.
@@ -21,8 +21,8 @@ description: >-
 
   ️ qBittorrent downloads torrents over the Clearnet, not Tor.
 
-developer: RudyRSDev
-website: https://github.com/torrentsec/qbittorrent-protonvpn-docker
+developer: torrentsec
+website: https://github.com/torrentsec
 submitter: RudyRSDev
 submission: https://github.com/torrentsec/qbittorrent-protonvpn-docker
 repo: https://github.com/torrentsec/qbittorrent-protonvpn-docker

@@ -79,7 +79,7 @@ services:
       - PUID=${PUID}  # User ID (ensures correct file permissions)
       - PGID=${PGID}  # Group ID (ensures correct file ownership)
       - TZ=${TZ}  # Timezone for logs and schedules
-      - WEBUI_PORT=8080  # Sets qBittorrent's Web UI to port 8080
+      - WEBUI_PORT=8095  # Sets qBittorrent's Web UI to port 8080
       - QBITTORRENT_INTERFACE=tun0  # 🔒 Forces all traffic through VPN interface
      
      # 🔄 Port Forwarding Mod (Syncs qBittorrent with Gluetun)
@@ -93,6 +93,8 @@ services:
       - ./qbittorrent:/config   # Stores qBittorrent settings persistently
       - ./incomplete:/incomplete  # ⚡ Temporary download location (reduces SSD wear)
       - ./:/downloads  # ✅ Completed torrents move here
+      - ${UMBREL_ROOT}/home/Downloads:/app/qBittorrent/downloads
+      - ${APP_DATA_DIR}/data/config:/config
 
     # ─── Performance Optimization ──────────────────────────────────────
     ulimits:
