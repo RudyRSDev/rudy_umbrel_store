@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: denny-decypharr
+id: rudyrsdev-decypharr
 name: Decypharr
 tagline: An advanced solution for automated Debrid downloads
 icon: https://raw.githubusercontent.com/dennysubke/dennys-umbrel-app-gallery/main/denny-decypharr/logo.png
@@ -17,12 +17,12 @@ description: >-
 
 
   ⚙️ For configuration, you should visit the official documentation at:
-  
-  
+
+
   https://sirrobot01.github.io/decypharr/.
 developer: Mukhtar Akere
 website: https://github.com/sirrobot01/decypharr
-submitter: dennysubke
+submitter: RudyRSDev
 submission: https://github.com/getumbrel/umbrel-apps/pull/
 repo: https://github.com/sirrobot01/decypharr
 support: https://github.com/sirrobot01/decypharr/issues
