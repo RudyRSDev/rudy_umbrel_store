@@ -5,14 +5,24 @@ services:
     environment:
       APP_HOST: denny-gopeed_web_1
       APP_PORT: 9999
+      PROXY_AUTH_ADD: "false"
 
   web:
-    image: liwei2633/gopeed
+    image: liwei2633/gopeed:latest
+    # Optional: explicitly force ARM64 if Docker is pulling the wrong arch
+    platform: linux/arm64
     restart: on-failure
-    environment:
-      - PUID=0
-      - PGID=0
-      - UMASK=022
+    stop_grace_period: 1m
     volumes:
-      - ${UMBREL_ROOT}/home/Downloads:/app/Downloads
-      - ${APP_DATA_DIR}/data/storage:/app/storage
+      # Map storage to the app data directory
+      - ${APP_DATA_DIR}/data:/app/storage
+      # Map downloads to the app data directory (or customize this path)
+      - ${APP_DATA_DIR}/downloads:/app/Downloads
+    environment:
+      - TZ=Etc/UTC
+      # Set PUID/PGID to 1000 (standard for Umbrel) to avoid permission errors
+      - PUID=1000
+      - PGID=1000
+      # Optional: Set a basic auth password if you want extra security
+      # - GOPEED_USERNAME=admin
+      # - GOPEED_PASSWORD=umbrel
