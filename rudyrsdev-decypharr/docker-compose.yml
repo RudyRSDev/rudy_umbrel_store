@@ -1,0 +1,19 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: rudyrsdev-decypharr_web_1
+      APP_PORT: 8282
+
+  web:
+    image: cy01/blackhole:latest
+    user: "1000:1000"
+    volumes:
+      - ${APP_DATA_DIR}/data/mnt/:/mnt
+      - ${APP_DATA_DIR}/data/configs/:/app
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - UMASK=002
+    restart: on-failure
